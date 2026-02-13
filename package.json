@@ -1,0 +1,12 @@
+{
+  "name": "saikids-story-studio-complete",
+  "version": "1.0.0",
+  "description": "SaiKids Story Studio desktop app built with Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^31.0.0"
+  }
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SaiKids Story Studio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>SaiKids Story Studio</h1>
+      <p>Build magical stories with kids, characters, music, and scenes.</p>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>Project Structure Ready</h2>
+        <ul>
+          <li>✅ index.html (Main UI)</li>
+          <li>✅ renderer.js (feature logic scaffold)</li>
+          <li>✅ main.js (Electron startup)</li>
+          <li>✅ style.css (styles)</li>
+          <li>✅ package.json (Electron dependencies)</li>
+          <li>✅ assets/{characters, backgrounds, music, effects}</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Feature Status</h2>
+        <p>
+          The app currently includes a clean scaffold and a placeholder registry for 42 story studio features in
+          <code>renderer.js</code>.
+        </p>
+        <button id="show-features">Show Feature Count</button>
+        <p id="feature-output">Click the button to verify.</p>
+      </section>
+    </main>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

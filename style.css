@@ -1,0 +1,50 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(160deg, #2f3a72, #7f56d9);
+  min-height: 100vh;
+  color: #f8f8ff;
+}
+
+header {
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem 2rem 2rem;
+}
+
+.panel {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3px);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+}
+
+button {
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #ffd166;
+  color: #2f3a72;
+  font-weight: 700;
+}
+
+code {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+}
