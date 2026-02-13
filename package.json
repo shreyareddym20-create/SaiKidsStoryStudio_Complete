@@ -1,10 +1,11 @@
 {
   "name": "saikids-story-studio-complete",
-  "version": "1.0.0",
-  "description": "SaiKids Story Studio desktop app built with Electron",
+  "version": "1.1.0",
+  "description": "Sai Kids Story Studio desktop app scaffold for Mac using Electron",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "lint:quick": "node --check main.js && node --check renderer.js"
   },
   "devDependencies": {
     "electron": "^31.0.0"
