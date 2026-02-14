@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sai Kids Story Studio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <h1>Sai Kids Story Studio</h1>
+        <p>Offline-first desktop studio for 2D kids storytelling (improved scaffold)</p>
+      </div>
+      <div class="header-actions">
+        <button id="generate-story-btn">One-Click 5 Minute Story</button>
+        <button id="preview-btn">Preview Story</button>
+        <button id="stop-preview-btn">Stop</button>
+        <button id="export-btn">Export MP4 (Scaffold)</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar panel">
+        <h2>Toolbar</h2>
+        <div class="toolbar-grid">
+          <button class="tool-btn" data-tool="characters">Characters</button>
+          <button class="tool-btn" data-tool="backgrounds">Backgrounds</button>
+          <button class="tool-btn" data-tool="motions">Motions</button>
+          <button class="tool-btn" data-tool="effects">Effects</button>
+          <button class="tool-btn" data-tool="voices">Voices</button>
+          <button class="tool-btn" data-tool="story">Story Input</button>
+          <button class="tool-btn" data-tool="templates">Templates</button>
+          <button class="tool-btn" data-tool="marketplace">Marketplace</button>
+        </div>
+
+        <h3>Asset Upload</h3>
+        <label>Characters <input id="characters-upload" type="file" accept=".png,.jpg,.jpeg" multiple /></label>
+        <label>Backgrounds <input id="backgrounds-upload" type="file" accept=".png,.jpg,.jpeg" multiple /></label>
+        <label>Music <input id="music-upload" type="file" accept=".mp3,.wav" multiple /></label>
+        <label>Effects <input id="effects-upload" type="file" accept=".mp3,.wav" multiple /></label>
+
+        <div class="row top-gap">
+          <button id="save-project-btn">Save Project JSON</button>
+          <label class="inline-file">Load Project <input id="load-project-input" type="file" accept="application/json" /></label>
+        </div>
+      </aside>
+
+      <section class="canvas-area panel">
+        <h2>Canvas Preview</h2>
+        <div id="canvas-preview" class="canvas-preview">
+          <p>Scene preview appears here. Drag/drop-ready scaffold for character rigging and weather layers.</p>
+        </div>
+        <p id="subtitle-output" class="subtitle">Subtitles will appear here during preview narration.</p>
+
+        <div class="story-tools">
+          <textarea id="story-prompt" rows="4" placeholder="Enter story prompt in Telugu/Hindi/English..."></textarea>
+          <div class="row">
+            <select id="language-select">
+              <option>Telugu</option>
+              <option>Hindi</option>
+              <option>Tamil</option>
+              <option>Kannada</option>
+              <option>Malayalam</option>
+              <option>Marathi</option>
+              <option>Bengali</option>
+              <option selected>English</option>
+            </select>
+            <select id="voice-select">
+              <option>Female Sweet</option>
+              <option>Male Warm</option>
+              <option>Child</option>
+              <option>Old</option>
+              <option>Aggressive</option>
+              <option>Crying</option>
+              <option>Laughing</option>
+            </select>
+            <button id="generate-scenes-btn">Auto Split Scenes</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline-area panel">
+        <h2>Timeline & Scenes</h2>
+        <div class="row">
+          <button id="add-scene-btn">Add Scene</button>
+          <button id="remove-scene-btn">Remove Selected</button>
+          <label>Duration (sec) <input id="scene-duration" type="number" min="5" value="60" /></label>
+        </div>
+        <ul id="scene-list" class="scene-list"></ul>
+      </section>
+
+      <section class="libraries panel">
+        <h2>Libraries</h2>
+        <div class="library-grid">
+          <article><h3>Characters Album</h3><ul id="characters-list"></ul></article>
+          <article><h3>Backgrounds Album</h3><ul id="backgrounds-list"></ul></article>
+          <article><h3>Music Album</h3><ul id="music-list"></ul></article>
+          <article><h3>Effects Album</h3><ul id="effects-list"></ul></article>
+        </div>
+      </section>
+
+      <section class="features panel">
+        <h2>42 Feature Coverage</h2>
+        <p id="feature-count"></p>
+        <ol id="feature-list"></ol>
+      </section>
+
+      <section class="dashboard panel">
+        <h2>Monetization Dashboard (Scaffold)</h2>
+        <ul>
+          <li>Stories Created: <strong id="stories-created">0</strong></li>
+          <li>Exports: <strong id="export-count">0</strong></li>
+          <li>Total Scene Time: <strong id="scene-time">0 sec</strong></li>
+          <li>Estimated Revenue: <strong id="estimated-revenue">₹0</strong></li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
